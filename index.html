@@ -44,7 +44,26 @@ While she debuted alone way before generations were established, she is currentl
          <iframe src="https://www.youtube.com/embed/uc7I72C1giU" width="560" height="315" frameborder="0"></iframe>
           </div>
         </section>
-        <script type="text/javascript" src="mobile.js">
+        <script type="text/javascript">
+		            var text = document.getElementById('text')
+            scroll = window.pageYOffset;
+            document.addEventListener('scroll', function (e){
+            var offset = window.pageYOffset;
+            scroll = offset;
+            text.style.top = - scroll/20 + '%';
+            })
+      const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
+
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
+
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
         </script>
     </body>
 </html>
